@@ -1,0 +1,20 @@
+    # .prettierignore
+
+    # Node.js specific ignores
+    node_modules/
+    dist/
+    build/
+    coverage/
+    .env
+    .DS_Store
+
+    # Common ignore patterns
+    *.log
+    *.lock
+    package-lock.json
+    yarn.lock
+    pnpm-lock.yaml
+
+    # Specific file or directory ignores
+    src/generated/
+    public/static/
