@@ -24,3 +24,4 @@ class Apierrors extends Error {
         }
     }
 }
+
