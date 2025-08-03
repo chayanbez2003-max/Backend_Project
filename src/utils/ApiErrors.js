@@ -3,7 +3,7 @@ class Apierrors extends Error {
              statusCode,
              message = "Internal Server Error",
              errors= [],
-             statck = ""
+             stack = ""
 
             )
              
@@ -16,8 +16,8 @@ class Apierrors extends Error {
         this.success = false;
     
 
-        if(statck){
-            this.stack = statck;
+        if(statk){
+            this.stack = stack;
         }
         else{
             Error.captureStackTrace(this, this.constructor);
