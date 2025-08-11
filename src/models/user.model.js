@@ -53,7 +53,7 @@ userSchema.pre("save", async function(next){
     if(!this.modifier("password")) return(next());
     //hash the password
 
-    this.password = await bcryot.hash(this.password, 10);
+    this.password = await bcrypt.hash(this.password, 10);// here 10 refers to the salt rounds/How many times hashing is repeated (cost factor)
     next();
 })
 
