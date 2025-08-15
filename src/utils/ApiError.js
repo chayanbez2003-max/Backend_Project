@@ -1,4 +1,4 @@
-class Apierrors extends Error {
+class ApiError extends Error {
     constructor(
              statusCode,
              message = "Internal Server Error",
@@ -16,7 +16,7 @@ class Apierrors extends Error {
         this.success = false;
     
 
-        if(statk){
+        if(stack){
             this.stack = stack;
         }
         else{
@@ -25,3 +25,4 @@ class Apierrors extends Error {
     }
 }
 
+export {ApiError};

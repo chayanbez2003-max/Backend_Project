@@ -50,7 +50,7 @@ const userSchema = new Schema({
 userSchema.pre("save", async function(next){
     //if password is not modified, skip hashing, otherwise it will keep changing the password on every save.
     
-    if(!this.modifier("password")) return(next());
+    if(!this.isModified("password")) return(next());
     //hash the password
 
     this.password = await bcrypt.hash(this.password, 10);// here 10 refers to the salt rounds/How many times hashing is repeated (cost factor)
